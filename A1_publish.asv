@@ -4,14 +4,13 @@
 % Peralta Alguacil (franciscojose.peraltaalguacil.0481@student.uu.se)
 % This report is for Computational Finance: Calibration and Estimation
 % Assignment 1. 
-%
-% In this project, the Black-Scholes model will be used to calibrate the 
-% implied volatility with an European call option. In the first part, we 
-% compute the volatility from one observation. Meanwhile, in the second 
-% part, we will obtain the volatility from several observations with 
-% different strike prices. 
+% The Black-Scholes model will be used to calibrate the implied volatility 
+% with an European call option. In the first part, we compute the 
+% volatility from one observation. Meanwhile, in the second part, 
+% we will obtain the volatility from several observations with different 
+% strike prices. 
 %% Part 1 
-% In this part, we compute the volatility from a single observed call
+% in this part, we compute the volatility from a single observed call
 % option with strike price K=100 and maturity T = 1. We have the input 
 % values listed in the function below, where fzero is called to compute 
 % $\sigma$. 
@@ -22,14 +21,14 @@ dbtype('function1.m');
 %The result is 
 sigma = fzero(@function1,0)
 
-%% Part 2
+%% Assignment 1, part 2
 % In this program, we compute the volatility from real market data 
 format long
 load('SX5E.mat'); %load market data 
 
 r = -0.0644; %interest rate
 
-%change time to appropiate units
+%change time to a 
 t = datenum(SX5E.t);
 T = datenum(SX5E.T);
 
@@ -49,9 +48,8 @@ end
 
 %plot of result
 plot(K0,sigma);
-grid on
 xlabel('K (strike price)');
-ylabel('Volatility \sigma');
-title ('Volatility \sigma from different strike prices');
+ylabel('volatility \sigma');
+title ('volatility \sigma from different strike prices');
 legend('\sigma');
 

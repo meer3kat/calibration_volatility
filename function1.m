@@ -2,7 +2,7 @@ function y_out = function1(sigma)
 
 C = 23.50604; %option price 
 K = 100; %strike price
-T = 1; %time 
+T = 1; %maturity time 
 S0 = 110; %current asset price
 r = 0.1; %interest rate
 q = 0.01; %divident with continuous rate
